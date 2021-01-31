@@ -10,17 +10,35 @@ const personalMovieDb = {
 };
 
 
-for (let i = 0; i<numberOfFilms; i++) {
+// for (let i = 0; i<numberOfFilms; i++) {
+//     const a = prompt("Назовите один из недавно просмотренных фильмов?", ''),
+//           b = prompt("Какой рейтинг Вы бы дали этому фильму?", '');
+
+    // if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length <= 3) {
+    //     personalMovieDb.movies[a] = b;
+
+    // }else  {
+    //     console.log('error with film Data');
+    //     i--;
+    // }
+// }
+// это один из вариантов написания цикла, снизу написан второй вариант этого же цикла
+
+let i = 0;
+while (i<numberOfFilms) {
     const a = prompt("Назовите один из недавно просмотренных фильмов?", ''),
           b = prompt("Какой рейтинг Вы бы дали этому фильму?", '');
-
+          i++;
+    
     if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length <= 3) {
-        personalMovieDb.movies[a] = b;
-
-    }else  {
+            personalMovieDb.movies[a] = b;
+    
+    }else {
         console.log('error with film Data');
-        i--;
+            i--;
     }
+        
+
 }
 
 if (personalMovieDb.count < 5) {
